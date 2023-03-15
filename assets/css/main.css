@@ -2849,7 +2849,7 @@ h2 {
 		}
 
 			#header > footer .icons {
-				margin: 0;
+				margin: 10px;
 			}
 
 				#header > footer .icons li a {
@@ -2889,13 +2889,38 @@ h2 {
 
 						#header > nav ul li a.active {
 							background: #333;
-							color: #ddd !important;
+							color: #cca46b !important;
 						}
 
 					#header > nav ul li:first-child {
 						border-top: 0;
 					}
 
+					footer ul.icons li a:hover {
+						/* Aggiunge un'ombra quando si passa il mouse sopra l'icona */
+						box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+					  }
+					  
+					  footer ul.icons li a[title]:hover::after {
+						/* Aggiunge un testo quando si passa il mouse sopra l'icona */
+						content: attr(title);
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+						padding: 5px;
+						background-color: rgba(0, 0, 0, 0.8);
+						color: #fff;
+						font-size: 12px;
+						border-radius: 3px;
+						white-space: nowrap;
+					  }
+/* ! Immagine Header*/
+.avatar img:hover {
+	transform: scale(1.1);
+	transition: transform 0.5s ease;
+	box-shadow: 0 5px 20px rgba(0,0,0,.05);
+  }
 /* ! Wrapper */
 
 	#wrapper {
@@ -2934,7 +2959,7 @@ h2 {
 		}
 
 			#footer .copyright li {
-				border-left: solid 1px #cf2525;
+				border-left: solid 1px #d4d4d4;
 				display: inline-block;
 				font-size: 0.8em;
 				margin-left: 1em;
@@ -2950,7 +2975,11 @@ h2 {
 				#footer .copyright li a {
 					color: inherit;
 				}
-
+/**/
+				.icon.solid.fa-file-pdf {
+					color: #fff;
+				}
+				
 /* ! XLarge */
 
 	@media screen and (max-width: 1680px) {
@@ -3332,32 +3361,6 @@ h2 {
 
 	}
 
-	.icons {
-		position: relative;
-	  }
-	
-	  .icons li {
-		opacity: 0;
-		transform: translateX(50px);
-		transition: all 0.5s ease;
-	  }
-	
-	  .icons li:nth-child(1) {
-		transition-delay: 0s;
-	  }
-	
-	  .icons li:nth-child(2) {
-		transition-delay: 0.2s;
-	  }
-	
-	  .icons li:nth-child(3) {
-		transition-delay: 0.4s;
-	  }
-	
-	  .icons.show li {
-		opacity: 1;
-		transform: translateX(0px);
-	  }
 /* ! XSmall */
 
 	@media screen and (max-width: 480px) {
@@ -3473,7 +3476,7 @@ h1#logo a {
 	font-family: 'Pacifico', cursive;
 	font-size: 2rem;
 	color: #454444;
-	text-shadow: 2px 2px #ddd;
+	text-shadow: 2px 2px #cca46b;
 }
 /* ! Sezioni destra*/
 nav ul li a:hover {
