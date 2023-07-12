@@ -2281,7 +2281,7 @@ input, select, textarea {
 
 #main {
 	background-color: #403060;
-	background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(to bottom right, #8a2387, #e94057, #f27121);
+	background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(to bottom right, #2fbbce, #6082cc, #449156);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
