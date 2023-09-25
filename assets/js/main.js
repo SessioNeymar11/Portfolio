@@ -225,5 +225,5 @@ $(document).ready(function() {
 	avatar.classList.toggle('active');
   });
 
-
+  
   
