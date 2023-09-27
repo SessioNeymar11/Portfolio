@@ -254,28 +254,45 @@
 			<!-- ********************************************************************QUARTA SEZIONE********************************************************************************-->
 			<section id="four">
 				<div class="container">
-					<h2>Richiedi un prodotto Amazon</h2>
-					<form method="post" action="https://formspree.io/f/meqwzgya">
-						<div class="row gtr-uniform">
-							<div class="col-6 col-12-xsmall"><input type="text" name="Nome e Cognome" id="name"
-									placeholder="Inserisci Nome e Cognome" /></div>
-							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
-									placeholder="Inserisci una mail valida" /></div>
-							<div class="col-12"><input type="text" name="Nome Prodotto" id="subject" placeholder="Inserisci il nome del prodotto. ex 'Iphone 15'" />
-							</div>
-							<div class="col-12"><textarea name="Informazioni Prodotto" id="message" placeholder="Inserisci le informazioni del prodotto con il relativo link"
-									rows="6"></textarea></div>
-							<div class="col-12">
-								<ul class="actions">
-									<li><input type="submit" class="primary" value="Invia Richiesa" /></li>
-									<li><input type="reset" value="Ripristina tutti i campi" /></li>
-								</ul>
-							</div>
+				  <h2>Richiedi un prodotto Amazon</h2>
+				  <form method="post" action="https://formspree.io/f/meqwzgya">
+					<div class="row gtr-uniform">
+					  <div class="col-6 col-12-xsmall">
+						<div class="input-with-placeholder">
+						  <input type="text" id="name" required />
+						  <label for="name">Nome e Cognome </label>
 						</div>
-					</form>
+					  </div>
+					  <div class="col-6 col-12-xsmall">
+						<div class="input-with-placeholder">
+						  <input type="email" id="email" required />
+						  <label for="email">Mail </label>
+						</div>
+					  </div>
+					  <div class="col-12">
+						<div class="input-with-placeholder">
+						  <input type="text" id="subject" required />
+						  <label for="subject">Nome del prodotto (ex. 'Iphone 15') </label>
+						</div>
+					  </div>
+					  <div class="col-12">
+						<div class="input-with-placeholder">
+						  <textarea id="message" rows="6" required></textarea>
+						  <label for="message">Informazioni prodotto con il relativo link </label>
+						</div>
+					  </div>
+					  <div class="col-12">
+						<ul class="actions">
+						  <li><input type="submit" class="primary" value="Invia Richiesa" /></li>
+						  <li><input type="reset" value="Ripristina tutti i campi" /></li>
+						</ul>
+					  </div>
+					</div>
+				  </form>
 				</div>
-		</div>
-		</section>
+			  </section>
+			  
+			  
 		<!-- *******************************************************************Footer****************************************************************************************-->
 
 	<!-- Scripts -->
