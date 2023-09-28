@@ -61,7 +61,7 @@ em, i {
 }
 
 p {
-	margin: 0 0 2.25em 0;
+	margin: 0 0 -70px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2296,6 +2296,13 @@ h2 {
 
 			
 /* ! Servizi Amazon */
+.project-desc {
+	font-size: 14px; /* Imposta la dimensione del carattere per la descrizione */
+	color: #000000; /* Imposta il colore del testo della descrizione */
+	text-align: center; /* Imposta l'allineamento del testo al centro */
+	margin-top: 10px; /* Aggiunge uno spazio tra l'immagine e la descrizione */
+  }
+  
 #three {
 	background-color: #232f3e;
 	padding: 10px 0;
@@ -2386,19 +2393,20 @@ h2 {
   .project-card:hover .project-image {
 	transform: scale(1.1); /* Ingrandisce leggermente l'immagine al passaggio del mouse */
   }
-  /* Aggiunge un indicatore visivo quando il mouse è sopra la card */
+
+  /* Aggiunge un indicatore visivo quando il mouse è sopra la card *
 .project-card:hover::before {
-	content: "\25B2"; /* Carattere Unicode per una freccia verso l'alto */
+	content: "\25B2"; /* Carattere Unicode per una freccia verso l'alto *
 	position: absolute;
 	top: 10px;
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 24px;
-	color: #007bff; /* Colore dell'indicatore */
+	color: #007bff; /* Colore dell'indicatore *
 	transition: opacity 0.3s ease;
 	opacity: 1;
   }
-  
+  */
   .project-card::before {
 	content: "";
 	position: absolute;
@@ -2411,6 +2419,18 @@ h2 {
   
  /* ! Mobile dio */
 	@media screen and (max-width: 480px) {
+		p {
+			margin: 0 0 -150px 0;
+		}
+		
+		.products-container {
+			display: flex;
+			gap: 20px;
+			padding: 20px;
+			overflow-x: auto;
+			position: relative;
+		}
+
 		.section-title {
 		  font-size: 1.5em; /* Riduci la dimensione del titolo */
 		}
@@ -3425,3 +3445,4 @@ nav ul li a:hover {
   ::-webkit-scrollbar-thumb:hover {
 	background: #232f3e;
   }
+  

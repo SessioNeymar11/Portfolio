@@ -11,8 +11,40 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+  /* Stile per l'icona di caricamento */
+  #loading-icon {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    text-align: center;
+    padding-top: 20%;
+  }
+</style>
+
 </head>
 <body class="is-preload">
+	<div id="loading-icon">
+		<i class="fas fa-spinner fa-spin fa-5x"></i>
+	  </div>
+	  <script>
+		document.onreadystatechange = function () {
+		  if (document.readyState === 'loading') {
+			// La pagina è in fase di caricamento
+			document.getElementById('loading-icon').style.display = 'block';
+		  } else if (document.readyState === 'complete') {
+			// La pagina è completamente caricata
+			document.getElementById('loading-icon').style.display = 'none';
+		  }
+		};
+	  </script>
+	  
 
 	<!-- *******************************************************************Header Destra*********************************************************************************-->
 	
@@ -56,13 +88,18 @@
 					  <div class="project-card">
 						<div class="project-card-inner" >
 						  <div class="project-card-front">
-							<a href="http://www.amazon.it/amazonprime?tag=dedonatos-21" target="_blank">
+							<a href="http://www.amazon.it/amazonprime?tag=dedonatos-21" target="_blank" >
 							  <img src="images/amazon-banner.jpg" alt="Progetto 1" class="project-image">
 							</a>
+<!--DESCRIZIONE 1-->
+							<div class="project-desc">
+    							<p>Iscriviti alla prova gratuita di Amazon Prime per 30 giorni, disdici quando vuoi</p>
+  							</div>
 						  </div>
+<!--DESCRIZIONE BACK 1-->
 						  <div class="project-card-back">
 							<div class="project-description">
-							<a href="http://www.amazon.it/amazonprime?tag=dedonatos-21" target="_blank">
+							<a href="http://www.amazon.it/amazonprime?tag=dedonatos-21" target="_blank" >
 							  <h5>Provalo GRATIS per 30 Giorni</h5>
 							</a>
 							</div>
@@ -78,7 +115,12 @@
 							  <a href="https://www.amazon.it/kindle-dbs/hz/signup?tag=dedonatos-21" target="_blank">
 								<img src="images/kindle-banner.jpg" alt="Progetto 1" class="project-image">
 							  </a>
+<!--DESCRIZIONE 2-->
+							  <div class="project-desc">
+    							<p>Iscriviti alla prova gratuita di Amazon Kindle per 30 giorni, disdici quando vuoi</p>
+  							</div>
 							</div>
+<!--DESCRIZIONE BACK 2-->
 							<div class="project-card-back">
 							  <div class="project-description">
 							<a href="https://www.amazon.it/kindle-dbs/hz/signup?tag=dedonatos-21" target="_blank">
@@ -97,7 +139,12 @@
 					  <a href="https://www.primevideo.com/?tag=dedonatos-21" target="_blank">
 						<img src="images/prime-video.jpg" alt="Progetto 1" class="project-image">
 					  </a>
+<!--DESCRIZIONE 3-->
+					  <div class="project-desc">
+						<p>Iscriviti alla prova gratuita di Prime Video per 30 giorni, <br> disdici quando vuoi</p>
+					  </div>
 					</div>
+<!--DESCRIZIONE BACK 3-->
 					<div class="project-card-back">
 					  <div class="project-description">
 					<a href="https://www.primevideo.com/?tag=dedonatos-21" target="_blank">
@@ -120,6 +167,11 @@
 							  <a href="https://www.amazon.it/hz/audible/mlp?actionCode=AZIOther35606092201BR&tag=dedonatos-21" target="_blank">
 								<img src="images/audible.jpg" alt="Progetto 1" class="project-image">
 							  </a>
+<!--DESCRIZIONE 4-->
+							  <div class="project-desc">
+    							<p>Iscriviti alla prova gratuita di Amazon Audible per 30 giorni, disdici quando vuoi</p>
+  							</div>
+<!--DESCRIZIONE BACK 4-->
 							</div>
 							<div class="project-card-back">
 							  <div class="project-description">
@@ -140,7 +192,12 @@
 								<a href="https://www.amazon.it/music/unlimited?tag=dedonatos-21" target="_blank">
 								  <img src="images/musicas.jpg" alt="Progetto 1" class="project-image">
 								</a>
+<!--DESCRIZIONE 5-->
+								<div class="project-desc">
+									<p>Iscriviti alla prova gratuita di Amazon Music per 90 giorni, disdici quando vuoi</p>
+								  </div>
 							  </div>
+<!--DESCRIZIONE BACK 5-->
 							  <div class="project-card-back">
 								<div class="project-description">
 								<a href="https://www.amazon.it/music/unlimited?tag=dedonatos-21" target="_blank">
@@ -159,7 +216,12 @@
 						<a href="http://www.amazon.it/joinstudent?tag=dedonatos-21" target="_blank">
 						  <img src="images/student.jpg" alt="Progetto 1" class="project-image">
 						</a>
+<!--DESCRIZIONE 6-->
+						<div class="project-desc">
+							<p>Iscriviti alla prova gratuita di Prime Student per 90 giorni, disdici quando vuoi</p>
+						  </div>
 					  </div>
+<!--DESCRIZIONE BACK 6-->
 					  <div class="project-card-back">
 						<div class="project-description">
 						<a href="http://www.amazon.it/joinstudent?tag=dedonatos-21" target="_blank">
@@ -173,9 +235,8 @@
 					</div>
 				  </div>
 			  </section>
-			  
-			  
-			<!-- ********************************************************************SECONDA SEZIONE********************************************************************************-->
+			  	  
+<!-- ********************************************************************SECONDA SEZIONE********************************************************************************-->
 			<section id="two">
 				<div class="container">
 					
