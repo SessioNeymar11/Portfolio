@@ -48,7 +48,7 @@ a {
 
 a:hover {
 	border-bottom-color: transparent;
-	color: #ff9900 !important;
+	color: #1ca8e3 !important;
 }
 
 strong, b {
@@ -1110,7 +1110,7 @@ pre code {
 
 .input-with-placeholder input:focus,
 .input-with-placeholder textarea:focus {
-  border-color: #ff9900;
+  border-color: #e2bc7d;
 }
 
 .input-with-placeholder input:focus + label,
@@ -1120,13 +1120,20 @@ pre code {
   top: -25px;
   left: 5px;
   font-size: 16px;
-  color: #ff9900;
+  color: #ddd;
 }
+.error-message {
+    color: #FF0000; /* Colore rosso per i messaggi di errore */
+    font-size: 14px; /* Dimensione del carattere per i messaggi di errore */
+    display: none; /* Inizialmente nascosto */
+}
+
+/*
 .input-with-placeholder.email label {
-	top: -25px; /* Alziamo leggermente il label */
+	top: -25px; /* Alziamo leggermente il label *
 	left: 10px;
 	font-size: 16px;
-	color: #ff9900;
+	color: #ddd;
   }
   
   .input-with-placeholder.email input:focus + label,
@@ -1134,9 +1141,9 @@ pre code {
 	top: -25px;
 	left: 10px;
 	font-size: 16px;
-	color: #ff9900;
+	color: #ddd;
   }
-  
+  */
 form {
 	margin-bottom: 2.25em;
   }
@@ -1183,14 +1190,14 @@ form {
   input[type="email"]:focus,
   select:focus,
   textarea:focus {
-	border-color: #ff9900;
+	border-color: #e2bc7d;
   }
   input[type="text"]:hover,
   input[type="password"]:hover,
   input[type="email"]:hover,
   select:hover,
   textarea:hover {
-	border-color: #ff9900;
+	border-color: #e2bc7d;
   }
   
   select {
@@ -1606,17 +1613,98 @@ form {
 	
 }
 
+
+/* ! Prodotti in Evidenza*/
+
+
+div.container > h2.gg{
+	padding-top: 0px;
+}
+
+#two > div.container {
+	background-color: #232f3e;
+	padding: 15px 0;
+}
+
+/* Stile generale del container dei prodotti */
+.products-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+
+/* Stile generale delle card dei prodotti */
+.product-card {
+    width: 300px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 10px;
+}
+/* Effetto hover sulle card dei prodotti */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile delle immagini dei prodotti */
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Stile delle descrizioni dei prodotti */
+.product-description {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Stile dei titoli dei prodotti */
+.product-title {
+	white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Stile dei pulsanti dei prodotti */
+.product-button {
+    display: block;
+    background-color: #e2bc7d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0 0 10px 10px;
+}
+
+.product-button:hover {
+    background-color: #caa870;
+	color: #1ca8e3 !important;
+}
+
 /* ! Sezioni */
 section {
   border-radius: 75px;
   margin-bottom: 4em;
   padding: 2em;
-  background-color: #ddd;
+  background-color: #232f3e;
   box-shadow: 0 0.25rem 1rem #232f3e;
   transition: box-shadow 0.5s 0.5s
 }
 section:hover {
-	box-shadow: 0 0 20px #ff9900;
+	box-shadow: 0 0 20px #e2bc7d;
 	transition: 0.5s ease;
   }
 
@@ -1970,10 +2058,10 @@ input[type="button"],
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background-color: #232f3e;
+  background-color: #e2bc7d;
   border-radius: 5px;
   border: 0;
-  color: #f5f5f5 !important;
+  color: #232323 !important;
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
@@ -1991,8 +2079,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
-  background-color: #232f3e;
-  color: #ffffff !important;
+  background-color: #e2bc7d;
+  color: #232323 !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
 }
@@ -2002,7 +2090,7 @@ input[type="submit"]:active,
 input[type="reset"]:active,
 input[type="button"]:active,
 .button:active {
-  background-color: #8b8b8b;
+  background-color: #e2bc7d;
 }
 
 /* Altri stili per diversi tipi di pulsanti */
@@ -2065,15 +2153,15 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 .button.primary {
-  background-color: #ff9900;
-  color: #ffffff !important;
+  background-color: #e2bc7d;
+  color: #232323 !important;
 }
 
 input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 .button.primary:hover {
-  background-color: #ff9900;
+  background-color: #e2bc7d;
 }
 
 /* Stili per pulsanti disabilitati */
@@ -2209,25 +2297,25 @@ h2 {
 			
 /* ! Servizi Amazon */
 #three {
-	background-color: #ddd;
+	background-color: #232f3e;
 	padding: 10px 0;
 	text-align: center;
   }
   
   .section-title {
 	font-size: 36px;
-	color: #333;
+	color: #e2bc7d;
 	margin-bottom: 30px;
   }
   h2 {
 	font-size: 36px;
 	font-style: bold;
-	color: #333;
+	color: #e2bc7d;
 	margin-bottom: 30px;
   }
   
   .project-card {
-	background-color: #232f3e;
+	background-color: #ddd;
 	border-color: #ddd;
 	border-top-left-radius: 35px;
 	border-top-right-radius: 35px;
@@ -2362,7 +2450,7 @@ h2 {
           .input-with-placeholder textarea:valid + label {
            top: -22px;
            font-size: 14px;
-           color: #ff9900;
+           color: #ddd;
           }
 		div.col-6.col-12-xsmall,
 		div.col-12 {
@@ -2392,7 +2480,7 @@ h2 {
 	  
 		/* Aggiungi effetti di transizione alle card mobile */
 		.project-card {
-		  background-color: #232f3e;
+		  background-color: #ddd;
 		  border-radius: 20px;
 		  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 		  overflow: hidden;
@@ -2550,48 +2638,33 @@ h2 {
 				}
 			}
 
-/* ! effetto sezione destra*/
-#nav li a {
-    border-radius: 40px;
-    position: relative;
-    display: inline-block;
-    color: #ddd;
-	padding-top: 30px;
-    padding-bottom: 3px;
+/* Stile di base per i pulsanti di navigazione */
+#nav ul li a {
     text-decoration: none;
-    overflow: hidden;
-    transition: color 0.2s ease;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#nav li a:hover {
-    color: #fff;
+/* Stile per il pulsante attivo */
+#nav ul li a.active {
+    background-color: #232f3e;
+    color: #ddd !important;
 }
 
-#nav li a:hover:before, #nav li a:hover:after {
-    transform: scaleX(1);
+/* Effetto di hover sui pulsanti */
+#nav ul li a:hover {
+    background-color: #232f3e;
+    color: #ddd !important;
 }
 
-#nav li a:before, #nav li a:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #1ca8e3;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 1s ease;
+/* Aggiungi effetto di transizione al passaggio del mouse */
+#nav ul li a {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#nav li a:before {
-    left: 100%;
-}
-
-#nav li a:after {
-    right: 100%;
-}
 
 /* ! Menù Destra */
 
@@ -2602,7 +2675,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background: #232f3e;
+	background: #e2bc7d;
 	color: #fff;
 	height: 100%;
 	overflow-y: auto;
@@ -2620,7 +2693,7 @@ h2 {
   }
   
   #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-	color: #ff9900;
+	color: #ddd;
   }
   
   /*#header a {
@@ -2669,13 +2742,14 @@ h2 {
   }
   
   #header > footer .icons li a {
-	color: #ff9900;
+	color: #ddd;
 	text-decoration: none;
 	transition: transform 0.2s;
   }
   
   #header > footer .icons li a:hover{
 	transform: scale(1.2);
+
   }
 
   #header > nav {
@@ -2692,9 +2766,9 @@ h2 {
 	display: block;
 	padding: 5px;
   }
-  
+/* ! Pulsanti Destra*/  
   #header > nav ul li a {
-	background-color: #e2bc7d;
+	background-color: #ddd;
 	transition: background 0.3s, color 0.3s;
 	border: 0;
 	color: #000000 !important;
@@ -2705,8 +2779,8 @@ h2 {
   }
   
   #header > nav ul li a.active {
-	background: #e2bc7d;
-	color: #000000 !important;
+	background: #232f3e;
+	color: #ddd !important;
 	font-weight: bold;
   }
   
@@ -2968,13 +3042,13 @@ footer ul.icons li a:hover {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #232f3e;
+				background: #e2bc7d;
 				color: #fff;
 				min-width: 320px;
 			}
 
 				#titleBar .title {
-					color: #ff9900;
+					color: #232323;
 					display: block;
 					font-weight: 700;
 					height: 44px;
@@ -3014,8 +3088,8 @@ footer ul.icons li a:hover {
 					}
 
 					#titleBar .toggle:before {
-						background: #232f3e;
-						color: #ff9900;
+						background: #e2bc7d;
+						color: #232323;
 						content: '\f0c9';
 						display: block;
 						font-size: 18px;
@@ -3240,64 +3314,65 @@ footer ul.icons li a:hover {
 
 /* ! La Roccia*/
 
-/* Imposta l'elemento h1 */
+/* Stile di base per l'elemento #logo */
 #logo {
-	font-size: 36px;
-	color: #000000;
-	transition: all 0.3s ease;
-	position: relative; /* Aggiungi posizione relativa per gli elementi figli */
+    font-size: 36px;
+    color: #000000;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-/* Aggiungi l'effetto di hover */
+/* Effetto di hover per il testo */
 #logo:hover {
-	color: #000000; /* Cambia il colore del testo al passaggio del mouse */
-	transform: translateY(-5px); /* Sposta l'elemento verso l'alto di 5px */
-
-	
+    color: #232f3e; /* Cambia il colore del testo al passaggio del mouse */
+    transform: scale(1.1); /* Aumenta le dimensioni del testo del 10% al passaggio del mouse */
+    font-weight: bold; /* Rendi il testo in grassetto al passaggio del mouse */
 }
 
-/* Aggiungi un'ombra al testo */
-#logo:hover:before {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(to right, #1ca8e3, #1ca8e3, #ffffff); /* Aggiungi un'ombra gradient */
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 0.3s ease; /* Aggiungi una transizione alla trasformazione */
-	animation: underline 1s forwards;
-}
-
-/* Aggiungi un'animazione all'ombra del testo */
-#logo:hover:before {
-	transform: scaleX(1);
+/* Aggiungi un'animazione di sfocatura al passaggio del mouse */
+#logo:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.2);
+    z-index: -1;
+    transition: opacity 0.3s ease;
 }
 
 /* Aggiungi un'animazione di dissolvenza al passaggio del mouse */
-#logo:hover:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	animation: fadeOut 0.5s ease forwards;
-	z-index: -1;
+#logo:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
-/* Definisci le animazioni */
-@keyframes fadeOut {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
+/* Aggiungi un'animazione al testo sfocato */
+#logo:hover::before,
+#logo:hover::after {
+    animation: blurFadeIn 0.3s forwards;
 }
- /* Definisci le animazioni */
- @keyframes underline {
-	0% { width: 0; }
-	100% { width: 100%; }
-  }
+
+/* Definisci l'animazione di sfocatura e dissolvenza */
+@keyframes blurFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 /* ! Sezioni destra*/
@@ -3343,10 +3418,10 @@ nav ul li a:hover {
   }
   
   ::-webkit-scrollbar-thumb {
-	background: #e2bc7d;
+	background: #232f3e;
 	border-radius: 5px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-	background: #e2bc7d;
+	background: #232f3e;
   }

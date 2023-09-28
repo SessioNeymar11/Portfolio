@@ -24,9 +24,9 @@
 		<nav id="nav">
 			<ul>
 				<li><a href="#three" class="active">Servizi Offerti</a></li>
+				<li><a href="#two">Prodotti</a></li>
 				<li><a href="#four">Richiesta Prodotto</a></li>
-				<!--<li><a href="#three">Progetti e Lavori</a></li>
-				<li><a href="#four">Contattami</a></li>-->
+				<!--<li><a href="#four">Contattami</a></li>-->
 			</ul>
 		</nav>
 		<!-- ********************************************************************Icone parte destra****************************************************************************-->
@@ -175,23 +175,78 @@
 			  </section>
 			  
 			  
-			<!-- ********************************************************************SECONDA SEZIONE********************************************************************************
+			<!-- ********************************************************************SECONDA SEZIONE********************************************************************************-->
 			<section id="two">
 				<div class="container">
-					<h2>Things I Can Do</h2>
-					<h3>Integer </h3>
-					<ul class="feature-icons">
-						<li class="icon solid fa-code">Write all the code</li>
-						<li class="icon solid fa-cubes">Stack small boxes</li>
-						<li class="icon solid fa-book">Read books and stuff</li>
-						<li class="icon solid fa-coffee">Drink much coffee</li>
-						<li class="icon solid fa-bolt">Lightning bolt</li>
-						<li class="icon solid fa-users">Shadow clone technique</li>
-					</ul>
+					
+					<h2 class="gg">Prodotti in evidenza</h2>
+					<div class="products-container" id="product-container">
+						
+						<div class="product-card" >
+							
+							<div class="product-image">
+								<img src="images/PRODRIC.png" alt="Nome Prodotto 1">
+							</div>
+							<div class="product-description">
+								<div class="product-title">Prodotto Richiesto</div>
+								<a href="#" class="product-button">Acquista ora</a>
+							</div>
+						</div>
+			
+						<!-- Ripeti questo blocco per ogni prodotto -->
+			
+						<div class="product-card">
+							<div class="product-image">
+								<img src="images/PRODRIC.png" alt="Nome Prodotto 2">
+							</div>
+							<div class="product-description">
+								<div class="product-title">Prodotto Richiesto</div>
+								<a href="#" class="product-button">Acquista ora</a>
+							</div>
+						</div>
+			
+						<div class="product-card">
+							<div class="product-image">
+								<img src="images/PRODRIC.png" alt="Nome Prodotto 3">
+							</div>
+							<div class="product-description">
+								<div class="product-title">Prodotto Richiesto</div>
+								<a href="#" class="product-button">Acquista ora</a>
+							</div>
+						</div>
+			
+						<div class="product-card">
+							<div class="product-image">
+								<img src="images/PRODRIC.png" alt="Nome Prodotto 4">
+							</div>
+							<div class="product-description">
+								<div class="product-title">Prodotto Richiesto</div>
+								<a target="_blank" href="#" class="product-button">Acquista ora</a>
+							</div>
+						</div>
+						<div class="product-card">
+							<div class="product-image">
+								<img src="images/PRODRIC.png" alt="Nome Prodotto 4">
+							</div>
+							<div class="product-description">
+								<div class="product-title">Prodotto Richiesto</div>
+								<a target="_blank" href="#" class="product-button">Acquista ora</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
-		-->
-			<!-- ********************************************************************TERZA SEZIONE********************************************************************************
+
+			<script>
+    const productContainer = document.getElementById('product-container');
+
+    productContainer.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        productContainer.scrollLeft += e.deltaY;
+    });
+</script>
+			
+		<!--********************************************************************TERZA SEZIONE********************************************************************************
 			<section id="three">
 				<div class="container">
 				  <h2>Progetti Recenti</h2>
@@ -255,36 +310,40 @@
 			<section id="four">
 				<div class="container">
 				  <h2>Richiedi un prodotto Amazon</h2>
-				  <form method="post" action="https://formspree.io/f/meqwzgya">
+				  <form method="post" action="https://formspree.io/f/meqwzgya" novalidate>
 					<div class="row gtr-uniform">
 					  <div class="col-6 col-12-xsmall">
 						<div class="input-with-placeholder">
-						  <input type="text" id="name" required />
+						  <input type="text" id="name" name="nome" required />
 						  <label for="name">Nome e Cognome </label>
 						</div>
+						<span id="name-error" class="error-message"></span> <!-- Aggiunto il messaggio di errore -->
 					  </div>
 					  <div class="col-6 col-12-xsmall">
 						<div class="input-with-placeholder">
-						  <input type="email" id="email" required />
+						  <input type="text" id="email" name="email" required />
 						  <label for="email">Mail </label>
 						</div>
+						<span id="email-error" class="error-message"></span> <!-- Aggiunto il messaggio di errore -->
 					  </div>
 					  <div class="col-12">
 						<div class="input-with-placeholder">
-						  <input type="text" id="subject" required />
+						  <input type="text" id="subject" name="subject" required />
 						  <label for="subject">Nome del prodotto (ex. 'Iphone 15') </label>
 						</div>
+						<span id="subject-error" class="error-message"></span> <!-- Aggiunto il messaggio di errore -->
 					  </div>
 					  <div class="col-12">
 						<div class="input-with-placeholder">
-						  <textarea id="message" rows="6" required></textarea>
-						  <label for="message">Informazioni prodotto con il relativo link </label>
+						  <textarea id="message" rows="6" name="message" required></textarea>
+						  <label for="message">Informazioni prodotto richiesto </label>
 						</div>
+						<span id="message-error" class="error-message"></span> <!-- Aggiunto il messaggio di errore -->
 					  </div>
 					  <div class="col-12">
 						<ul class="actions">
-						  <li><input type="submit" class="primary" value="Invia Richiesa" /></li>
-						  <li><input type="reset" value="Ripristina tutti i campi" /></li>
+						  <li><input type="submit" class="primary" value="Invia Richiesa" onclick=" validateName() && validateEmail() && validateSubject();"/></li>
+						  <li><input type="reset" id="reset" value="Ripristina tutti i campi" onclick="resetForm(); "/></li>
 						</ul>
 					  </div>
 					</div>
@@ -292,7 +351,95 @@
 				</div>
 			  </section>
 			  
-			  
+ <!--************************************************Scripts***************************************************************-->
+<script>
+
+// Funzione per ripulire i messaggi di errore
+function clearErrorMessages() {
+    const errorMessages = document.querySelectorAll('.error-message');
+    errorMessages.forEach(function (errorMessage) {
+        errorMessage.textContent = '';
+        errorMessage.style.display = 'none';
+    });
+}
+
+// Aggiungi un ascoltatore di eventi al pulsante di reset
+document.getElementById('reset').addEventListener('click', function () {
+    clearErrorMessages();
+});
+
+
+function validateName() {
+    const nameInput = document.getElementById('name');
+    const nameError = document.getElementById('name-error');
+
+    if (nameInput.validity.valueMissing) {
+        nameError.textContent = 'Compila questo campo.';
+        nameError.style.display = 'block';
+        return false;
+    } else {
+        nameError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateEmail() {
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    const emailValue = emailInput.value;
+
+    if (emailInput.validity.valueMissing) {
+        emailError.textContent = 'Compila questo campo.';
+        emailError.style.display = 'block';
+        return false;
+    } else if (!emailValue.includes('@')) {
+        emailError.textContent = 'Inserisci un indirizzo email valido.';
+        emailError.style.display = 'block';
+        return false;
+    } else {
+        emailError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateSubject() {
+    const subjectInput = document.getElementById('subject');
+    const subjectError = document.getElementById('subject-error');
+
+    if (subjectInput.validity.valueMissing) {
+        subjectError.textContent = 'Compila questo campo.';
+        subjectError.style.display = 'block';
+        return false;
+    } else {
+        subjectError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateMessage() {
+    const messageInput = document.getElementById('message');
+    const messageError = document.getElementById('message-error');
+
+    if (messageInput.validity.valueMissing) {
+        messageError.textContent = 'Compila questo campo.';
+        messageError.style.display = 'block';
+        return false;
+    } else {
+        messageError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateForm() {
+    return validateName() && validateEmail() && validateSubject() && validateMessage();
+}
+
+document.querySelector('form').addEventListener('submit', function (e) {
+    if (!validateForm()) {
+        e.preventDefault();
+    }
+});
+</script>
 		<!-- *******************************************************************Footer****************************************************************************************-->
 
 	<!-- Scripts -->
